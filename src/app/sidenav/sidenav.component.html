@@ -1,0 +1,42 @@
+<div class="page-container">
+    <header>
+        <div>
+        <a routerLink="/">
+            <span class="app-title">GemHack 2021</span>
+        </a>
+        <button mat-button class="menu-button" (click)="sidenav.toggle()">
+            <mat-icon class="menu">{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+        </button>
+        
+        </div>
+        <div class="spacer"></div>
+        <div>
+            <button mat-button class="social-media-button">
+                <fa-icon [icon]="faTwitter" size="2x"></fa-icon>
+            </button>
+            <button mat-button class="social-media-button">
+                <fa-icon [icon]="faInstagram" size="2x"></fa-icon>
+            </button>
+        </div>
+    </header>
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav 
+            #sidenav 
+            autoFocus="false" 
+            mode="over" 
+            [(opened)]="isMenuOpen" 
+            class="sidenav" 
+            (click)="onSidenavClick()">
+          <a mat-button routerLink="/">Page 1</a>
+          <a mat-button routerLink="/">Page 2</a>
+          <a mat-button routerLink="/">Page 3</a>
+          <a mat-button routerLink="/">Page 4</a>
+          <a mat-button routerLink="/">Page 5</a>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <main>
+            <router-outlet></router-outlet>
+          </main>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+  </div>
