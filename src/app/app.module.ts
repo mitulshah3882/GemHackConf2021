@@ -14,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeTemplateComponent } from './home-template/home-template.component';
+import { MatDividerModule } from '@angular/material/divider';
+
 
 
 
@@ -32,7 +34,8 @@ import { HomeTemplateComponent } from './home-template/home-template.component';
     FormsModule,
     MatIconModule,
     MatButtonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
