@@ -13,13 +13,15 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HomeTemplateComponent } from './home-template/home-template.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent
+    SidenavComponent,
+    HomeTemplateComponent
   ],
   imports: [
     BrowserModule,

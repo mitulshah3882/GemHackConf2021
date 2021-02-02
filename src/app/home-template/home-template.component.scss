@@ -1,0 +1,115 @@
+.page-container {
+    height: 100%;
+    background: #fafafa;
+    color: #000;
+  
+    display: flex;
+    flex-direction: column;
+  
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+  
+    header {
+        background:  #563158;
+        color: #fff;
+  
+        padding: 18px 24px;
+        
+        font-size: 14px;
+        font-weight: bold;
+  
+        display: flex;
+        justify-content: space-between;
+  
+        .menu-button {
+            margin-right: 24px;
+            min-width: 0;
+            padding: 0;
+            line-height: normal;
+          }
+          
+          .menu {
+            vertical-align: sub;
+        }
+  
+        .app-title {
+            // padding: 0 3px;
+            margin-right: 20px;
+            font-size: 21px;
+        }
+    }
+  }
+  
+  .sidenav-container {
+    flex: 1;
+  
+    .sidenav {
+        min-width: 240px;
+  
+        a {
+            display: block;
+            padding: 6px 24px;
+            width: 100%;
+            text-align: left;
+        }
+    }
+  
+    main {
+        padding: 18px 24px;
+    }
+  }
+  
+  .social-media-button {
+    line-height: normal;
+  }
+
+  .main-image {
+    /* The image used */
+    background-image: url("/assets/imgs/city.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+    height: 100%;
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: -webkit-optimize-contrast;
+    will-change: webkit-transform;
+}
+
+  .image-overlay {
+    background-color: rgba(0, 0, 0, .25);
+    width: 100%;
+    height: 100%;
+}
+
+.light-purple-text {
+    color: #bd8cbf;
+}
+
+.dark-purple-text {
+    color: #563158;
+}
+
+.main-content {
+    color: white;
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 90px;       
+}
+  
+  // Responsive Styles 
+  @media screen and (max-width: 767px) {
+  
+    
+  }
+  
+  @media screen and (max-width: 575px) {
+    
+  }

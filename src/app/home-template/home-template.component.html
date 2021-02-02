@@ -1,0 +1,60 @@
+<div class="page-container">
+    <header>
+        <div>
+        <a routerLink="/">
+            <span class="app-title">GemHack 2021</span>
+            <!-- <span class="app-title">Gem<span class="light-purple-text">Hack </span>2021</span> -->
+        </a>
+        <button mat-button class="menu-button" (click)="sidenav.toggle()">
+            <mat-icon class="menu">{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+        </button>
+        
+        </div>
+        <div class="spacer"></div>
+        <div>
+            <a mat-button class="social-media-button" target="_blank" href="https://www.instagram.com/gemhackco/?hl=en">
+                <fa-icon [icon]="faTwitter" size="2x"></fa-icon>
+            </a>
+            <a mat-button class="social-media-button" target="_blank" href="https://twitter.com/gemhackco">
+                <fa-icon [icon]="faInstagram" size="2x"></fa-icon>
+            </a>
+            <a mat-button class="social-media-button" target="_blank">
+                <fa-icon [icon]="faLinkedinIn" size="2x"></fa-icon>
+            </a>
+        </div>
+    </header>
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav 
+            #sidenav 
+            autoFocus="false" 
+            mode="over" 
+            [(opened)]="isMenuOpen" 
+            class="sidenav" 
+            (click)="onSidenavClick()">
+          <a mat-button routerLink="/">Page 1</a>
+          <a mat-button routerLink="/">Page 2</a>
+          <a mat-button routerLink="/">Page 3</a>
+          <a mat-button routerLink="/">Page 4</a>
+          <a mat-button routerLink="/">Page 5</a>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="main-image">
+                <div class="image-overlay">
+                    <div class="main-content">
+                        <br>
+                        <span class="mat-display-4">GemHack</span><br><span class="mat-display-3">Summit 2021</span>
+                        <!-- <br> -->
+                        <!-- <h4><span>October </span>23 - 25, 2020</h4> -->
+                        <!-- <br> -->
+                        <!-- <p>The World's First Hackathon to Solve the Gem and Jewelry Industry's Most Complex Problems</p> -->
+                        <!-- <button id="attendButton" class="attend-btn"><a href="#attend" class="text-uppercase" onclick="scrollBottom()">Attend</a></button>
+                        <button id="attendButton" class="attend-btn"><a href="#attend" onclick="toLocation('./schedule.html')" class="text-uppercase" onclick="scrollBottom()">Schedule</a></button> -->
+                    </div>
+                </div>
+            </div>
+            <main>
+                <router-outlet></router-outlet>
+            </main>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+  </div>
