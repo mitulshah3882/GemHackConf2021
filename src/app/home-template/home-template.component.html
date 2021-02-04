@@ -1,7 +1,8 @@
 <div class="page-container">
     <header>
-        <div>
-            <a routerLink="/">
+        <div id="top">
+            <!-- <a routerLink="/"> -->
+            <a href="/" target="_self">
                 <span class="app-title">GemHack 2021</span>
                 <!-- <span class="app-title">Gem<span class="light-purple-text">Hack </span>2021</span> -->
             </a>
@@ -30,6 +31,7 @@
             [(opened)]="isMenuOpen" 
             class="sidenav" 
             (click)="onSidenavClick()">
+            <a mat-button href="/" target="_self">Home</a>
             <a mat-button href="#about" target="_self">About the Summit</a>
             <a mat-button href="#presenters" target="_self">Presenters & Topics</a>
             <!-- <a mat-button routerLink="/">Page 3</a> -->
