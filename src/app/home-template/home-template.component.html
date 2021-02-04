@@ -30,11 +30,12 @@
             [(opened)]="isMenuOpen" 
             class="sidenav" 
             (click)="onSidenavClick()">
-          <a mat-button routerLink="/">Page 1</a>
-          <a mat-button routerLink="/">Page 2</a>
-          <a mat-button routerLink="/">Page 3</a>
-          <a mat-button routerLink="/">Page 4</a>
-          <a mat-button routerLink="/">Page 5</a>
+            <a mat-button href="#about" target="_self">About the Summit</a>
+            <a mat-button href="#presenters" target="_self">Presenters & Topics</a>
+            <!-- <a mat-button routerLink="/">Page 3</a> -->
+            <!-- <a mat-button routerLink="/">Page 4</a> -->
+            <!-- <a mat-button routerLink="/">Page 5</a> -->
+            <router-outlet></router-outlet>
         </mat-sidenav>
         <mat-sidenav-content>
             <div class="main-image">
@@ -54,7 +55,7 @@
                 </div>
             </div>
             <main>
-                <div class="secondary-content">
+                <div class="secondary-content" id="about">
                     <span class="mat-display-2">About GemHack Summit</span>
                     <div class="body-content">
                         <span class="mat-body">
@@ -71,7 +72,7 @@
                     </div>
                 </div>
                 <mat-divider></mat-divider>
-                <div class="secondary-content">
+                <div id="presenters" class="secondary-content">
                     <span class="mat-display-2">Presenters & Topics</span>
                     <div class="body-content">
                         <div class="responsive">
@@ -112,7 +113,10 @@
                           </div>
                     </div>
                 </div>
-                <router-outlet></router-outlet>
+                <!-- <button mat-raised-button class="scrollTopButton" (click)="gotoTop()">Primary</button> -->
+                <!-- <footer>
+                    <p>text footer</p>
+                </footer> -->
             </main>
         </mat-sidenav-content>
       </mat-sidenav-container>
