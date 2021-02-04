@@ -1,14 +1,13 @@
 <div class="page-container">
     <header>
         <div>
-        <a routerLink="/">
-            <span class="app-title">GemHack 2021</span>
-            <!-- <span class="app-title">Gem<span class="light-purple-text">Hack </span>2021</span> -->
-        </a>
-        <button mat-button class="menu-button" (click)="sidenav.toggle()">
-            <mat-icon class="menu">{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
-        </button>
-        
+            <a routerLink="/">
+                <span class="app-title">GemHack 2021</span>
+                <!-- <span class="app-title">Gem<span class="light-purple-text">Hack </span>2021</span> -->
+            </a>
+            <button mat-button class="menu-button" (click)="sidenav.toggle()">
+                <mat-icon class="menu">{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+            </button>
         </div>
         <div class="spacer"></div>
         <div>
@@ -41,7 +40,7 @@
             <div class="main-image">
                 <div class="image-overlay">
                     <div class="main-content">
-                        <div class="centered-content">
+                        <div class="centered-content fadeIn">
                             <span class="mat-display-4">GemHack</span><br><span class="mat-display-3">Summit</span>
                             <br>
                             <span class="mat-headline">June 2021</span>
@@ -50,7 +49,7 @@
                             <br>
                             <button class="main-buttons" mat-raised-button color="primary">Button 1</button>
                             <button class="main-buttons" mat-raised-button color="primary">Button 2</button>
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
