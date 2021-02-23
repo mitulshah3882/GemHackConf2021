@@ -24,11 +24,11 @@ export class HomeTemplateComponent implements OnInit {
 
   // AirTable API
   Airtable = require('airtable');
-  base = new this.Airtable({apiKey: 'keyvOSzcyYqwMu5vI'}).base('appqgvkmjbRZELjEh');
+  base = new this.Airtable({apiKey: ''}).base('appqgvkmjbRZELjEh');
   
   // AirTable CMS Values
-  titleContent: any;
-  aboutContent: any;
+  titleContent: string = "";
+  aboutContent: string = "";
 
   async getAirTableContent() {
     let totalRecords: any = []
@@ -47,13 +47,10 @@ export class HomeTemplateComponent implements OnInit {
               this.aboutContent = record.fields.Content
             }
           });
-          // console.log(totalRecords);
-          // titleContent = totalRecords
           // To fetch the next page of records, call `fetchNextPage`.
           // If there are more records, `page` will get called again.
           // If there are no more records, `done` will get called.
           fetchNextPage();
-          // console.log(totalRecords)
         }, function done(err: any) {
           if (err) { console.error(err); return; }
         });
